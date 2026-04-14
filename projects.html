@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theodor Lindberg | Consulting</title>
+    <title>Theodor Lindberg | Projects</title>
     <meta
       name="description"
-      content="Independent consultant helping teams ship better products, faster."
+      content="Selected projects and work by Theodor Lindberg."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@
   <body>
     <header class="site-header">
       <div class="brand" aria-label="theodor lindberg bar tiom">
-        <a class="brand-name" href="#top">Theodor Lindberg</a>
+        <a class="brand-name" href="index.html">Theodor Lindberg</a>
         <span class="brand-divider" aria-hidden="true">|</span>
         <a class="brand-company" href="https://tiom.nu">TIOM</a>
       </div>
@@ -38,65 +38,89 @@
     </header>
 
     <main id="top">
-      <div class="page-line" aria-hidden="true"></div>
-      <section class="hero container">
-        <p class="hero-subline reveal">Independent Consultant</p>
-        <h1 class="reveal">Theodor Lindberg</h1>
-        <p class="lead reveal">Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
-      </section>
-
       <section class="container projects-intro reveal">
-        <p class="section-label">Spotlight Projects</p>
-        <h2>Selected work</h2>
-        <p class="projects-lead">Three projects that show the mix of product thinking, technical depth, and visual craft.</p>
+        <p class="section-label">Personal Work</p>
+        <h1>Projects</h1>
+        <p class="projects-lead">A compact index of product and technical work, organized by technology and year.</p>
       </section>
 
-      <section class="container projects-list spotlight-projects">
-        <article class="project-entry reveal" id="spotlight-2024">
+      <section class="container section-block projects-index reveal">
+        <div class="projects-index-group">
+          <h2>By Technology</h2>
+          <div class="index-links">
+            <a href="#project-next">Next.js</a>
+            <a href="#project-webgl">HTML5</a>
+            <a href="#project-express">CSS3</a>
+            <a href="#project-js">JavaScript</a>
+          </div>
+        </div>
+        <div class="projects-index-group">
+          <h2>By Year</h2>
+          <div class="index-links index-links-years">
+            <a href="#project-2024">2024</a>
+            <a href="#project-2023">2023</a>
+            <a href="#project-2022">2022</a>
+            <a href="#project-2020">2020</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container projects-list">
+        <article class="project-entry reveal" id="project-2024">
           <div class="project-meta">
             <p class="project-year">2024</p>
-            <p class="project-tags">Next.js · Express.js · VectorDB</p>
+            <p class="project-tags">HTML5 · CSS3 · Supabase</p>
           </div>
           <div class="project-body">
             <div class="project-copy">
-              <h2><a href="projects.html#project-2024">Placeholder Project One</a></h2>
-              <p>Placeholder description for a spotlight project. </p>
+              <h2><a href="https://example.com" target="_blank" rel="noopener noreferrer">Placeholder Project One</a></h2>
+              <p>Placeholder description for a project entry.</p>
             </div>
             <div class="project-preview project-preview-blue" aria-hidden="true"></div>
           </div>
         </article>
 
-        <article class="project-entry reveal" id="spotlight-next">
+        <article class="project-entry reveal" id="project-next">
           <div class="project-meta">
             <p class="project-year">2023</p>
             <p class="project-tags">Next.js</p>
           </div>
           <div class="project-body">
             <div class="project-copy">
-              <h2><a href="projects.html#project-next">Placeholder Project Two</a></h2>
-              <p>Placeholder description for a second spotlight project. </p>
+              <h2><a href="https://example.com" target="_blank" rel="noopener noreferrer">Placeholder Project Two</a></h2>
+              <p>Placeholder description for a second project entry.</p>
             </div>
             <div class="project-preview project-preview-orange" aria-hidden="true"></div>
           </div>
         </article>
 
-        <article class="project-entry reveal" id="spotlight-webgl">
+        <article class="project-entry reveal" id="project-webgl">
           <div class="project-meta">
             <p class="project-year">2022</p>
-            <p class="project-tags">WebGL · Three.js</p>
+            <p class="project-tags">HTML5 · CSS3</p>
           </div>
           <div class="project-body">
             <div class="project-copy">
-              <h2><a href="projects.html#project-webgl">Placeholder Project Three</a></h2>
-              <p>Placeholder description for a third spotlight project. </p>
+              <h2><a href="https://example.com" target="_blank" rel="noopener noreferrer">Placeholder Project Three</a></h2>
+              <p>Placeholder description for a third project entry.</p>
             </div>
             <div class="project-preview project-preview-teal" aria-hidden="true"></div>
           </div>
         </article>
-      </section>
 
-      <section class="container spotlight-link reveal">
-        <a href="projects.html">View all projects</a>
+        <article class="project-entry reveal" id="project-js">
+          <div class="project-meta">
+            <p class="project-year">2020</p>
+            <p class="project-tags">JavaScript · CSS</p>
+          </div>
+          <div class="project-body">
+            <div class="project-copy">
+              <h2><a href="https://example.com" target="_blank" rel="noopener noreferrer">Placeholder Project Four</a></h2>
+              <p>Placeholder description for another project entry.</p>
+            </div>
+            <div class="project-preview project-preview-slate" aria-hidden="true"></div>
+          </div>
+        </article>
       </section>
     </main>
 
@@ -126,18 +150,16 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Hamburger menu toggle
       const navToggle = document.querySelector(".nav-toggle");
       const navMenu = document.querySelector(".nav-menu");
-      
-      if (navToggle) {
+
+      if (navToggle && navMenu) {
         navToggle.addEventListener("click", () => {
           navToggle.classList.toggle("active");
           navMenu.classList.toggle("active");
         });
 
-        // Close menu when a link is clicked
-        document.querySelectorAll(".nav-menu a").forEach(link => {
+        document.querySelectorAll(".nav-menu a").forEach((link) => {
           link.addEventListener("click", () => {
             navToggle.classList.remove("active");
             navMenu.classList.remove("active");
@@ -145,7 +167,6 @@
         });
       }
 
-      // Scroll reveal animation
       const revealElements = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
