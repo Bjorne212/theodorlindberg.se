@@ -31,6 +31,7 @@
         </button>
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -143,6 +144,33 @@
             navMenu.classList.remove("active");
           });
         });
+      }
+
+      const prefersFlashlight = window.matchMedia("(min-width: 851px) and (pointer: fine)").matches;
+
+      if (prefersFlashlight) {
+        let latestX = window.innerWidth / 2;
+        let latestY = window.innerHeight / 3;
+        let animationFrameId = null;
+
+        const updateFlashlight = () => {
+          document.body.style.setProperty("--flashlight-x", `${latestX}px`);
+          document.body.style.setProperty("--flashlight-y", `${latestY}px`);
+          animationFrameId = null;
+        };
+
+        window.addEventListener(
+          "pointermove",
+          (event) => {
+            latestX = event.clientX;
+            latestY = event.clientY;
+
+            if (animationFrameId === null) {
+              animationFrameId = requestAnimationFrame(updateFlashlight);
+            }
+          },
+          { passive: true }
+        );
       }
 
       // Scroll reveal animation

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Profile Placeholder</title>
+  <desc id="desc">Abstract placeholder portrait for about page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10213b"/>
+      <stop offset="100%" stop-color="#0a1322"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#6da2d8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6da2d8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glow)"/>
+  <circle cx="400" cy="340" r="150" fill="#173053"/>
+  <path d="M170 900c28-165 128-245 230-245s202 80 230 245" fill="#173053"/>
+  <path d="M210 880c26-126 106-198 190-198s164 72 190 198" fill="#1f3f69"/>
+  <text x="50%" y="955" text-anchor="middle" fill="#9fb5d6" font-family="Manrope, sans-serif" font-size="30" letter-spacing="5">PHOTO PLACEHOLDER</text>
+</svg>
