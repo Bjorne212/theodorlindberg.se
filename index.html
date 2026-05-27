@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -31,7 +31,6 @@
         </button>
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -41,57 +40,117 @@
     <main id="top">
       <div class="page-line" aria-hidden="true"></div>
       <section class="hero container">
-        <p class="hero-subline reveal">Independent Consultant</p>
-        <h1 class="reveal">Theodor Lindberg</h1>
-        <p class="lead reveal">Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+        <p class="hero-subline reveal">Independent Consultant · Linköping</p>
+        <h1 class="reveal">Theodor <span class="name-accent">Lindberg</span><span class="hero-caret" aria-hidden="true"></span></h1>
+        <p class="lead reveal">
+          I help small teams ship better products — from first prototype to
+          production. Currently building <a href="https://tiom.nu">TIOM</a>.
+        </p>
+      </section>
+
+      <section class="container about-inline" id="about">
+        <div class="about-inline-grid reveal">
+          <figure class="about-inline-photo-wrap">
+            <span class="photo-backdrop" aria-hidden="true"></span>
+            <div class="photo-frame">
+              <img
+                class="about-inline-photo"
+                src="assets/profilbild.png"
+                alt="Portrait of Theodor Lindberg"
+              />
+            </div>
+          </figure>
+          <div class="about-inline-content">
+            <p class="section-label">// About</p>
+            <h2>Engineer, builder, occasional designer.</h2>
+            <p>
+              I'm Theodor — a developer based in Linköping who likes shipping
+              things that feel obvious in hindsight. Most of my work lives at
+              the seam between product, design, and code, where small details
+              add up to something that actually works.
+            </p>
+            <p>
+              I run <a href="https://tiom.nu">TIOM</a>, a one-person studio for
+              consulting, prototyping, and the occasional weekend experiment.
+              Off-screen you'll find me on a bike, in a bouldering gym, or
+              quietly nerding out about typography.
+            </p>
+
+            <dl class="now-list">
+              <div class="now-row">
+                <dt>Building</dt>
+                <dd>TIOM · client work · side projects</dd>
+              </div>
+              <div class="now-row">
+                <dt>Stack</dt>
+                <dd>TypeScript · Next.js · Postgres · a bit of WebGL</dd>
+              </div>
+              <div class="now-row">
+                <dt>Reading</dt>
+                <dd>A Philosophy of Software Design</dd>
+              </div>
+              <div class="now-row">
+                <dt>Listening</dt>
+                <dd>Lo-fi, jazz, and the occasional Bicep set</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
       </section>
 
       <section class="container projects-intro reveal">
-        <p class="section-label">Spotlight Projects</p>
-        <h2>Selected work</h2>
-        <p class="projects-lead">Three projects that show the mix of product thinking, technical depth, and visual craft.</p>
+        <p class="section-label">// Selected work</p>
+        <h2>Things I've shipped lately</h2>
+        <p class="projects-lead">A small slice — the rest lives on the <a href="projects.html">projects</a> page. Three pieces that show the mix of product thinking, technical depth, and visual craft.</p>
       </section>
 
       <section class="container projects-list spotlight-projects">
-        <article class="project-entry reveal" id="spotlight-2024">
+        <article class="project-entry reveal" id="spotlight-hardhat">
           <div class="project-meta">
-            <p class="project-year">2024</p>
-            <p class="project-tags">Next.js · Express.js · VectorDB</p>
+            <p class="project-year">2026</p>
+            <p class="project-tags">Python · Discord API · Security</p>
           </div>
           <div class="project-body">
             <div class="project-copy">
-              <h2><a href="projects.html#project-2024">Placeholder Project One</a></h2>
-              <p>Placeholder description for a spotlight project. </p>
+              <h2><a href="projects.html#project-hardhat">Hardhat</a></h2>
+              <p>An HTTP security headers audit tool that grades websites on a point system and reports findings to Discord via slash commands and weekly summaries.</p>
             </div>
-            <div class="project-preview project-preview-blue" aria-hidden="true"></div>
+            <div class="project-preview project-preview-stack" aria-hidden="true">
+              <img src="assets/hardhat-fail.png" alt="" class="stack-card stack-card-back" />
+              <img src="assets/hardhat-pass.png" alt="" class="stack-card stack-card-front" />
+            </div>
           </div>
         </article>
 
-        <article class="project-entry reveal" id="spotlight-next">
+        <article class="project-entry reveal" id="spotlight-webscout">
           <div class="project-meta">
-            <p class="project-year">2023</p>
-            <p class="project-tags">Next.js</p>
+            <p class="project-year">2026</p>
+            <p class="project-tags">Python · Ollama · MLX · FastAPI</p>
           </div>
           <div class="project-body">
             <div class="project-copy">
-              <h2><a href="projects.html#project-next">Placeholder Project Two</a></h2>
-              <p>Placeholder description for a second spotlight project. </p>
+              <h2><a href="projects.html#project-webscout">WebScout</a></h2>
+              <p>A local-first lead generation tool that audits company websites and scores them using local Ollama models, with MLX fine-tuning on the yes/no feedback. Runs entirely on your own machine.</p>
             </div>
-            <div class="project-preview project-preview-orange" aria-hidden="true"></div>
+            <div class="project-preview project-preview-image" aria-hidden="true">
+              <img src="assets/webscout.png" alt="" />
+            </div>
           </div>
         </article>
 
-        <article class="project-entry reveal" id="spotlight-webgl">
+        <article class="project-entry reveal" id="spotlight-travel-planner">
           <div class="project-meta">
-            <p class="project-year">2022</p>
-            <p class="project-tags">WebGL · Three.js</p>
+            <p class="project-year">2026</p>
+            <p class="project-tags">Next.js · TypeScript · Supabase · Tailwind</p>
           </div>
           <div class="project-body">
             <div class="project-copy">
-              <h2><a href="projects.html#project-webgl">Placeholder Project Three</a></h2>
-              <p>Placeholder description for a third spotlight project. </p>
+              <h2><a href="projects.html#project-travel-planner">Travel Planner</a></h2>
+              <p>A collaborative travel planning app where groups share trips, tasks, and itineraries. Built as a university project together with Jonathan Jonsson.</p>
             </div>
-            <div class="project-preview project-preview-teal" aria-hidden="true"></div>
+            <div class="project-preview project-preview-image" aria-hidden="true">
+              <img src="assets/travelplanner.png" alt="" />
+            </div>
           </div>
         </article>
       </section>
@@ -103,14 +162,14 @@
 
     <footer class="site-footer container">
       <div class="footer-content">
-        <p>© <span id="year"></span> Theodor Lindberg</p>
+        <p class="footer-meta">© <span id="year"></span> Theodor Lindberg · Linköping</p>
         <div class="social-links">
-          <a href="https://linkedin.com/in/theodor-lindberg" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/theodor-l-00245a203" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.736 0-9.646h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.503zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.708 0-.951.771-1.71 1.958-1.71 1.187 0 1.914.759 1.939 1.71 0 .95-.752 1.708-1.982 1.708zm1.582 11.019H3.715V9.806h3.204v10.646zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
           </a>
-          <a href="https://github.com/theodor-lindberg" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Bjorne212" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
@@ -124,68 +183,6 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Hamburger menu toggle
-      const navToggle = document.querySelector(".nav-toggle");
-      const navMenu = document.querySelector(".nav-menu");
-      
-      if (navToggle) {
-        navToggle.addEventListener("click", () => {
-          navToggle.classList.toggle("active");
-          navMenu.classList.toggle("active");
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll(".nav-menu a").forEach(link => {
-          link.addEventListener("click", () => {
-            navToggle.classList.remove("active");
-            navMenu.classList.remove("active");
-          });
-        });
-      }
-
-      const prefersFlashlight = window.matchMedia("(min-width: 851px) and (pointer: fine)").matches;
-
-      if (prefersFlashlight) {
-        let latestX = window.innerWidth / 2;
-        let latestY = window.innerHeight / 3;
-        let animationFrameId = null;
-
-        const updateFlashlight = () => {
-          document.body.style.setProperty("--flashlight-x", `${latestX}px`);
-          document.body.style.setProperty("--flashlight-y", `${latestY}px`);
-          animationFrameId = null;
-        };
-
-        window.addEventListener(
-          "pointermove",
-          (event) => {
-            latestX = event.clientX;
-            latestY = event.clientY;
-
-            if (animationFrameId === null) {
-              animationFrameId = requestAnimationFrame(updateFlashlight);
-            }
-          },
-          { passive: true }
-        );
-      }
-
-      // Scroll reveal animation
-      const revealElements = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in-view");
-            }
-          });
-        },
-        { threshold: 0.28, rootMargin: "0px 0px -10% 0px" }
-      );
-      revealElements.forEach((el) => observer.observe(el));
-    </script>
+    <script src="main.js" defer></script>
   </body>
 </html>
