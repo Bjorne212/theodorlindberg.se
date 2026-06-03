@@ -639,7 +639,7 @@ h3 {
 }
 
 .about-inline {
-  padding: 6rem 0 6rem;
+  padding: 6rem 0 8rem;
   scroll-margin-top: 90px;
 }
 
@@ -760,39 +760,6 @@ h3 {
 
 .about-inline-content a:hover {
   border-bottom-color: var(--orange);
-}
-
-.now-list {
-  margin: 1.8rem 0 0;
-  padding: 1.2rem 0 0;
-  border-top: 1px dashed rgba(96, 133, 176, 0.32);
-  display: grid;
-  gap: 0.55rem;
-}
-
-.now-row {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 1rem;
-  align-items: baseline;
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.86rem;
-  line-height: 1.55;
-}
-
-.now-row dt {
-  color: var(--orange);
-  letter-spacing: 0.02em;
-}
-
-.now-row dt::before {
-  content: "→ ";
-  color: #6b8aad;
-}
-
-.now-row dd {
-  margin: 0;
-  color: var(--text);
 }
 
 .projects-lead a {
@@ -1357,7 +1324,7 @@ h3 {
   }
 
   .about-inline {
-    padding: 2.5rem 0 1.5rem;
+    padding: 2.5rem 0 3rem;
   }
 
   .about-inline-grid {
@@ -1390,11 +1357,6 @@ h3 {
   .contact-meta {
     grid-template-columns: 1fr;
     gap: 0.4rem;
-  }
-
-  .now-row {
-    grid-template-columns: 90px 1fr;
-    font-size: 0.82rem;
   }
 
   .hero {
